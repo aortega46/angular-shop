@@ -1,0 +1,16 @@
+<li class="flex flex-col gap-4 rounded bg-[#111] p-4 text-white shadow">
+  <img
+    class="aspect-video w-full rounded object-cover"
+    src="{{ product.thumbnail }}"
+    alt="{{ product.title }}" />
+  <div class="flex justify-center">
+    <p>
+      <strong>{{ product.title }}</strong> | ${{ product.price }}
+    </p>
+  </div>
+  <div>
+    <button>
+      <mat-icon class="material-symbols-outlined"> add_shopping_cart </mat-icon>
+    </button>
+  </div>
+</li>

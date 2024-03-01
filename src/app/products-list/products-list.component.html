@@ -1,0 +1,8 @@
+<ul class="grid grid-cols-2 gap-4">
+  @for (
+    product of productsService.filteredProducts$ | async;
+    track product.id
+  ) {
+    <product-item [product]="product" />
+  }
+</ul>
