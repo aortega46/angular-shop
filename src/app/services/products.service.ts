@@ -18,14 +18,15 @@ export class ProductsService {
   })
 
   filterProducts() {
-    const { minPrice, category } = this.filters.getValue()
-    const filtered = this.products.filter(
-      product =>
-        product.price >= minPrice &&
-        (category === 'all' || product.category === category)
-    )
+    this.filters.subscribe(({ minPrice, category }) => {
+      const filtered = this.products.filter(
+        product =>
+          product.price >= minPrice &&
+          (category === 'all' || product.category === category)
+      )
 
-    this.filteredProducts.next(filtered)
+      this.filteredProducts.next(filtered)
+    })
   }
 
   updateFilters(
@@ -36,7 +37,5 @@ export class ProductsService {
   ) {
     const currentFilters = this.filters.getValue()
     this.filters.next({ ...currentFilters, ...updates })
-
-    this.filterProducts()
   }
 }
