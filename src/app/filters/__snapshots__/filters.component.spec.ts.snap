@@ -5,10 +5,10 @@ exports[`FiltersComponent should match snapshot 1`] = `
   id="root1"
 >
   <section
-    class="flex justify-between"
+    class="flex flex-col justify-between gap-2 sm:flex-row"
   >
     <div
-      class="flex items-center gap-1"
+      class="flex items-center gap-2"
     >
       <label
         for="minPrice"
@@ -26,7 +26,7 @@ exports[`FiltersComponent should match snapshot 1`] = `
       </span>
     </div>
     <div
-      class="flex items-center gap-1"
+      class="flex items-center gap-2"
     >
       <label
         for="category"

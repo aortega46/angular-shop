@@ -5,7 +5,7 @@ exports[`ProductItemComponent should match snapshot 1`] = `
   id="root1"
 >
   <li
-    class="flex flex-col gap-4 rounded bg-[#111] p-4 text-white shadow"
+    class="flex h-full flex-col justify-between gap-4 rounded bg-[#111] p-4 text-white shadow"
   >
     <img
       alt="Test"
@@ -22,11 +22,15 @@ exports[`ProductItemComponent should match snapshot 1`] = `
          | $100 
       </p>
     </div>
-    <div>
-      <button>
+    <div
+      class="flex items-center justify-center"
+    >
+      <button
+        class="bg-blue-400 flex items-center justify-center px-4 py-2 rounded"
+      >
         <mat-icon
           aria-hidden="true"
-          class="mat-icon notranslate material-symbols-outlined material-icons mat-ligature-font mat-icon-no-color"
+          class="mat-icon notranslate material-icons-outlined material-icons mat-ligature-font mat-icon-no-color"
           data-mat-icon-type="font"
           role="img"
         >

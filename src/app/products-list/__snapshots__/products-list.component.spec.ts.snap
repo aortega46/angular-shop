@@ -5,7 +5,7 @@ exports[`ProductsListComponent should match snapshot 1`] = `
   id="root1"
 >
   <ul
-    class="grid grid-cols-2 gap-4"
+    class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2"
   >
     
   </ul>
