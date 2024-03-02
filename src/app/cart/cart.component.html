@@ -5,10 +5,8 @@
 </button>
 
 <aside
-  class=" bg-black p-8 top-0 right-0 transition {{
-    isCartOpened
-      ? 'translate-x-0 fixed h-full w-52'
-      : 'translate-x-full fixed h-full'
+  class=" bg-black fixed w-52 h-full p-8 top-0 right-0 transition {{
+    isCartOpened ? 'translate-x-0' : 'translate-x-full'
   }}">
   <ul>
     @for (product of cartService.cart | async; track product.id) {
