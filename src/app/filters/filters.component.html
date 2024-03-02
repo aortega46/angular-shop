@@ -1,5 +1,5 @@
-<section class="flex justify-between">
-  <div class="flex items-center gap-1">
+<section class="flex flex-col justify-between gap-2 sm:flex-row">
+  <div class="flex items-center gap-2">
     <label for="minPrice">Price from: </label>
     <input
       #minPrice
@@ -12,7 +12,7 @@
     <span>${{ (productsService.filters | async)!.minPrice }}</span>
   </div>
 
-  <div class="flex items-center gap-1">
+  <div class="flex items-center gap-2">
     <label for="category">Category</label>
     <select
       #category

@@ -1,4 +1,5 @@
-<li class="flex flex-col gap-4 rounded bg-[#111] p-4 text-white shadow">
+<li
+  class="flex h-full flex-col justify-between gap-4 rounded bg-[#111] p-4 text-white shadow">
   <img
     class="aspect-video w-full rounded object-cover"
     src="{{ product.thumbnail }}"
@@ -8,10 +9,13 @@
       <strong>{{ product.title }}</strong> | ${{ product.price }}
     </p>
   </div>
-  <div>
-    <button (click)="isOnCart ? removeFromCart() : addToCart()">
-      <mat-icon
-        class="material-icons-outlined {{ isOnCart ? 'text-red-400' : '' }}">
+  <div class="flex items-center justify-center">
+    <button
+      (click)="isOnCart ? removeFromCart() : addToCart()"
+      class="flex items-center justify-center rounded px-4 py-2 {{
+        isOnCart ? 'bg-red-400' : 'bg-blue-400'
+      }} ">
+      <mat-icon class="material-icons-outlined">
         {{ isOnCart ? 'remove_shopping_cart' : 'add_shopping_cart' }}
       </mat-icon>
     </button>

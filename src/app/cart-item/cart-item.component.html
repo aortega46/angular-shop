@@ -1,13 +1,17 @@
-<li class="border-b-slate-500 pb-16">
+<li class="border-b-slate-500 pb-4">
   <img
-    class="aspect-video w-full"
+    class="aspect-video w-full rounded"
     src="{{ product.thumbnail }}"
     alt="{{ product.title }}" />
-  <div>
-    <strong>{{ product.title }}</strong> - {{ product.price }}
+  <div class="m-2">
+    <strong>{{ product.title }}</strong> - ${{ product.price }}
   </div>
   <footer class="flex items-center justify-center gap-2">
     <small>Qty: {{ product.quantity }}</small>
-    <button class="p-2 hover:scale-110" (click)="addToCart()">+</button>
+    <button
+      class="rounded bg-slate-800 px-3 hover:outline hover:outline-1 hover:outline-blue-400"
+      (click)="addToCart()">
+      +
+    </button>
   </footer>
 </li>
