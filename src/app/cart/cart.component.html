@@ -11,8 +11,8 @@
       : 'translate-x-full fixed h-full'
   }}">
   <ul>
-    @for (product of []; track $index) {
-      <cart-item [product]="product" />
+    @for (product of cartService.cart | async; track product.id) {
+      <cart-item [product]="product" (onAddToCart)="addToCart($event)" />
     }
   </ul>
 

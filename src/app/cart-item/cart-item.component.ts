@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
 import { CartProduct } from '../interfaces/cart-product'
 
@@ -10,4 +10,10 @@ import { CartProduct } from '../interfaces/cart-product'
 })
 export class CartItemComponent {
   @Input() product!: CartProduct
+
+  @Output() onAddToCart = new EventEmitter<CartProduct>()
+
+  addToCart() {
+    this.onAddToCart.emit(this.product)
+  }
 }
