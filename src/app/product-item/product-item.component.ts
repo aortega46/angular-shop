@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
+import { Product } from '../interfaces/product'
 
 @Component({
   selector: 'product-item',
@@ -8,5 +9,7 @@ import { MatIconModule } from '@angular/material/icon'
   templateUrl: './product-item.component.html',
 })
 export class ProductItemComponent {
-  @Input() product?: any
+  // * At this point,signal inputs exists so it can be done with that
+  // https://angular.io/guide/signal-inputs#why-should-we-use-signal-inputs-and-not-input
+  @Input() product!: Product
 }

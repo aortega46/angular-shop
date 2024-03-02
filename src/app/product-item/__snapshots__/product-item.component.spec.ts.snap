@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductItemComponent should match snapshot 1`] = `
+<div
+  id="root1"
+>
+  <li
+    class="flex flex-col gap-4 rounded bg-[#111] p-4 text-white shadow"
+  >
+    <img
+      alt="Test"
+      class="aspect-video w-full rounded object-cover"
+      src="test.png"
+    />
+    <div
+      class="flex justify-center"
+    >
+      <p>
+        <strong>
+          Test
+        </strong>
+         | $100 
+      </p>
+    </div>
+    <div>
+      <button>
+        <mat-icon
+          aria-hidden="true"
+          class="mat-icon notranslate material-symbols-outlined material-icons mat-ligature-font mat-icon-no-color"
+          data-mat-icon-type="font"
+          role="img"
+        >
+           add_shopping_cart 
+        </mat-icon>
+      </button>
+    </div>
+  </li>
+</div>
+`;
