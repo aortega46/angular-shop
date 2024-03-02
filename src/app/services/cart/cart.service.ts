@@ -31,4 +31,8 @@ export class CartService {
     const newCart = [...currentCart, { ...product, quantity: 1 }]
     return this.cart.next(newCart)
   }
+
+  clearCart() {
+    this.cart.next([])
+  }
 }
