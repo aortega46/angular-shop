@@ -7,7 +7,14 @@ import { CartProduct } from '../../interfaces/cart-product'
   providedIn: 'root',
 })
 export class CartService {
-  cart = new BehaviorSubject<CartProduct[]>([])
+  cart: BehaviorSubject<CartProduct[]>
+
+  constructor() {
+    const storedItems = localStorage.getItem('cart')
+    const initialItems = storedItems ? JSON.parse(storedItems) : []
+
+    this.cart = new BehaviorSubject<CartProduct[]>(initialItems)
+  }
 
   addToCart(product: Product) {
     const currentCart = this.cart.getValue()
@@ -25,10 +32,12 @@ export class CartService {
         ...currentCart.slice(productInCartIndex + 1),
       ]
 
+      this.updateLocalStorage(newCart)
       return this.cart.next(newCart)
     }
 
     const newCart = [...currentCart, { ...product, quantity: 1 }]
+    this.updateLocalStorage(newCart)
     return this.cart.next(newCart)
   }
 
@@ -42,9 +51,15 @@ export class CartService {
     const currentCart = this.cart.getValue()
     const newCart = currentCart.filter(item => item.id !== id)
     this.cart.next(newCart)
+    this.updateLocalStorage(newCart)
   }
 
   clearCart() {
     this.cart.next([])
+    this.updateLocalStorage([])
+  }
+
+  updateLocalStorage(cart: CartProduct[]) {
+    localStorage.setItem('cart', JSON.stringify(cart))
   }
 }
