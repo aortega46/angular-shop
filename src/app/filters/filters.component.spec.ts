@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 
 import { FiltersComponent } from './filters.component'
 import { By } from '@angular/platform-browser'
-import { ProductsService } from '../services/products.service'
+import { ProductsService } from '../services/products/products.service'
 
 describe('FiltersComponent', () => {
   let component: FiltersComponent

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
-import { products } from '../mocks/products.json'
+import { products } from '../../mocks/products.json'
 import { BehaviorSubject } from 'rxjs'
-import { Product } from '../interfaces/product'
+import { Product } from '../../interfaces/product'
 
 @Injectable({
   providedIn: 'root',

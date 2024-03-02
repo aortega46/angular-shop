@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core'
-import { ProductsService } from '../services/products.service'
+import { ProductsService } from '../services/products/products.service'
 import { AsyncPipe } from '@angular/common'
 
 @Component({

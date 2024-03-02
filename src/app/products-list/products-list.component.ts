@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core'
 import { ProductItemComponent } from '../product-item/product-item.component'
-import { ProductsService } from '../services/products.service'
+import { ProductsService } from '../services/products/products.service'
 import { AsyncPipe } from '@angular/common'
 
 @Component({
