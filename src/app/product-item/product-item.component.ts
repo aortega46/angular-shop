@@ -1,6 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
 import { Product } from '../interfaces/product'
+import { Subscription } from 'rxjs'
+import { CartService } from '../services/cart/cart.service'
 
 @Component({
   selector: 'product-item',
@@ -8,14 +10,30 @@ import { Product } from '../interfaces/product'
   imports: [MatIconModule],
   templateUrl: './product-item.component.html',
 })
-export class ProductItemComponent {
-  // * At this point,signal inputs exists so it can be done with that
-  // https://angular.io/guide/signal-inputs#why-should-we-use-signal-inputs-and-not-input
+export class ProductItemComponent implements OnInit, OnDestroy {
   @Input() product!: Product
 
-  @Output() onAddToCart = new EventEmitter<Product>()
+  cartService = inject(CartService)
+
+  isOnCart: boolean = false
+
+  checkProductInCartSub?: Subscription
+
+  ngOnInit(): void {
+    this.checkProductInCartSub = this.cartService
+      .checkProductInCart(this.product.id)
+      .subscribe(isOnCart => (this.isOnCart = isOnCart))
+  }
+
+  ngOnDestroy() {
+    this.checkProductInCartSub?.unsubscribe()
+  }
 
   addToCart() {
-    this.onAddToCart.emit(this.product)
+    this.cartService.addToCart(this.product)
+  }
+
+  removeFromCart() {
+    this.cartService.removeFromCart({ id: this.product.id })
   }
 }
