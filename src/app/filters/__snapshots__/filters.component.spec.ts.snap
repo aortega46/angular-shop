@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FiltersComponent should match snapshot 1`] = `
+<div
+  id="root1"
+>
+  <section
+    class="flex justify-between"
+  >
+    <div
+      class="flex items-center gap-1"
+    >
+      <label
+        for="minPrice"
+      >
+        Price from: 
+      </label>
+      <input
+        max="2000"
+        min="0"
+        name="minPrice"
+        type="range"
+      />
+      <span>
+        $0
+      </span>
+    </div>
+    <div
+      class="flex items-center gap-1"
+    >
+      <label
+        for="category"
+      >
+        Category
+      </label>
+      <select
+        class="text-black"
+        name="category"
+      >
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="smartphones"
+        >
+          Smartphones
+        </option>
+        <option
+          value="laptops"
+        >
+          Laptops
+        </option>
+      </select>
+    </div>
+  </section>
+</div>
+`;
