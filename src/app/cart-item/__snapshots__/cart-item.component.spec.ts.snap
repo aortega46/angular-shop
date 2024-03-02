@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItemComponent should match snapshot 1`] = `
+<div
+  id="root1"
+>
+  <li
+    class="border-b-slate-500 pb-4"
+  >
+    <img
+      alt="Test"
+      class="aspect-video w-full rounded"
+      src="test.png"
+    />
+    <div
+      class="m-2"
+    >
+      <strong>
+        Test
+      </strong>
+       - $100 
+    </div>
+    <footer
+      class="flex items-center justify-center gap-2"
+    >
+      <small>
+        Qty: 1
+      </small>
+      <button
+        class="rounded bg-slate-800 px-3 hover:outline hover:outline-1 hover:outline-blue-400"
+      >
+         + 
+      </button>
+    </footer>
+  </li>
+</div>
+`;
