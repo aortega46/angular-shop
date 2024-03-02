@@ -1,0 +1,13 @@
+<li class="border-b-slate-500 pb-16">
+  <img
+    class="aspect-video w-full"
+    src="{{ product.thumbnail }}"
+    alt="{{ product.title }}" />
+  <div>
+    <strong>{{ product.title }}</strong> - {{ product.price }}
+  </div>
+  <footer class="flex items-center justify-center gap-2">
+    <small>Qty: {{ product.quantity }}</small>
+    <button class="p-2 hover:scale-110">+</button>
+  </footer>
+</li>
