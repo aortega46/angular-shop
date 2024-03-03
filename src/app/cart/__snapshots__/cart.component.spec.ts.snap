@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartComponent should match snapshot 1`] = `
+<div
+  id="root1"
+>
+  <button
+    class="fixed right-4 top-2 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-blue-400 p-1"
+  >
+    <mat-icon
+      aria-hidden="true"
+      class="mat-icon notranslate material-icons-outlined material-icons mat-ligature-font mat-icon-no-color"
+      data-mat-icon-name="shopping_cart"
+      data-mat-icon-type="font"
+      fonticon="shopping_cart"
+      role="img"
+    />
+  </button>
+  <aside
+    class="bg-black fixed flex flex-col h-full items-center overflow-y-auto p-8 right-0 top-0 transition translate-x-full w-72"
+  >
+    <ul
+      class="mb-2 mt-4 border-b-2 border-b-slate-800"
+    >
+      
+    </ul>
+    <button
+      class="flex rounded bg-slate-800 px-4 py-2"
+    >
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons-outlined material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-name="remove_shopping_cart"
+        data-mat-icon-type="font"
+        fonticon="remove_shopping_cart"
+        role="img"
+      />
+    </button>
+  </aside>
+</div>
+`;
